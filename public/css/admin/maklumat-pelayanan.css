@@ -1,0 +1,413 @@
+/* Import base admin styles */
+@import url('../admin/dashboard.css');
+
+/* Override specific styles for maklumat pelayanan */
+.page-header h1 i {
+    color: #0d6efd;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: white !important;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stat-icon i {
+    font-size: 2rem;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card.purple .stat-icon {
+    background: rgba(111, 66, 193, 0.1);
+}
+
+.stat-card.purple .stat-icon i {
+    color: #6f42c1;
+}
+
+.stat-card.yellow .stat-icon {
+    background: rgba(255, 193, 7, 0.1);
+}
+
+.stat-card.yellow .stat-icon i {
+    color: #ffc107;
+}
+
+.stat-card.red .stat-icon{
+    background: rgba(220, 53, 69, 0.1);
+}
+
+.stat-card.red .stat-icon i {
+    color: #dc3545;
+}
+
+.stat-card.gray .stat-icon{
+    background: rgba(108, 117, 125, 0.1);
+}
+
+.stat-card.gray i {
+    color: #6c757d;
+}
+
+.stat-card.blue .stat-icon{
+    background: rgba(13, 110, 253, 0.1);
+}
+
+.stat-card.blue i {
+    color: #0d6efd;
+}
+
+.stat-card.cyan .stat-icon{
+    background: rgba(13, 202, 240, 0.1);
+}
+
+.stat-card.cyan i {
+    color: #0dcaf0;
+}
+
+.stat-card.green .stat-icon{
+    background: rgba(25, 135, 84, 0.1);
+}
+
+.stat-card.green i {
+    color: #198754;
+}
+
+.stat-card.orange .stat-icon {
+    background: rgba(253, 126, 20, 0.1);
+}
+
+.stat-card.orange .stat-icon i {
+    color: #fd7e14;
+}
+
+.stat-card.red .stat-icon{
+    background: rgba(220, 53, 69, 0.1);
+}
+
+.stat-card.red .stat-icon i {
+    color: #dc3545;
+}
+
+/* Kategori Badge Colors */
+.kategori-badge.standar_pelayanan {
+    background: rgba(13, 202, 240, 0.1);
+    color: #0dcaf0;
+}
+
+.kategori-badge.kualitas_air {
+    background: rgba(111, 66, 193, 0.1);
+    color: #6f42c1;
+}
+
+.kategori-badge.hak_pelanggan {
+    background: rgba(253, 126, 20, 0.1);
+    color: #fd7e14;
+}
+
+.kategori-badge.kewajiban_pelanggan {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+}
+
+.kategori-badge.sanksi {
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.kategori-badge.pengaduan {
+    background: rgba(108, 117, 125, 0.1);
+    color: #6c757d;
+}
+
+/* Grid jadi 8 kolom atau 4 baris (2 kolom) */
+.stats-row {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Responsive - 2 kolom di tablet */
+@media (max-width: 1200px) {
+    .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Pagination */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.pagination-info {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.pagination-info strong {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.pagination-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.pagination-btn {
+    min-width: 36px;
+    height: 36px;
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    color: #64748b;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-btn:hover:not(.disabled):not(.active) {
+    border-color: #3b82f6;
+    color: #3b82f6;
+    background: #eff6ff;
+}
+
+.pagination-btn.active {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    border-color: #3b82f6;
+}
+
+.pagination-btn.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pagination-dots {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+/* Default hidden */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.active {
+    display: flex !important;
+}
+
+/* Filter & Search */
+.table-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.filter-box {
+    position: relative;
+    min-width: 200px;
+}
+
+.filter-box i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.filter-box select {
+    width: 100%;
+    padding: 10px 12px 10px 35px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #495057;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-box select:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+/* Table Specific Styles */
+.kategori-badge {
+    display: inline-flex;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.icon-preview {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(13, 110, 253, 0.1);
+    border-radius: 8px;
+    color: #0d6efd;
+    font-size: 18px;
+}
+
+.urutan-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 8px;
+    font-weight: 700;
+    color: #495057;
+}
+
+.status-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.status-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 26px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.status-toggle input:checked + .toggle-slider {
+    background-color: #198754;
+}
+
+.status-toggle input:checked + .toggle-slider:before {
+    transform: translateX(24px);
+}
+
+/* Form Specific */
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.checkbox-label:hover {
+    background: #e9ecef;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checkbox-label span {
+    font-weight: 500;
+    color: #495057;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .table-actions {
+        flex-direction: column;
+    }
+
+    .filter-box {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

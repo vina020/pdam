@@ -1,0 +1,288 @@
+/* === Layanan Style === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --accent-color: #17a2b8;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === HERO SECTION === */
+.hero-layanan {
+    position: relative;
+    height: 60vh;
+    background: url('/images/hero2.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* === LAYANAN PAGE === */
+.layanan-page {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: var(--secondary-color);
+}
+
+/* === LAYANAN WRAPPER & GRID === */
+.layanan-wrapper {
+    position: relative;
+    padding: 0 20px;
+}
+
+.layanan-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    position: relative;
+}
+
+.layanan-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.layanan-grid::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.layanan-grid::-webkit-scrollbar-thumb {
+    background: rgba(13, 110, 253, 0.5);
+    border-radius: 10px;
+}
+
+.layanan-grid::-webkit-scrollbar-thumb:hover {
+    background: rgba(13, 110, 253, 0.8);
+}
+
+/* === LAYANAN ITEM CARDS === */
+.layanan-item {
+    background: white;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 260px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-decoration: none; 
+    color: inherit;
+    display: block; 
+}
+
+.layanan-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.layanan-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.layanan-item p {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.layanan-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* === SLIDER BUTTONS (ARROWS) === */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(13, 110, 253, 0.95);
+    border: none;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.layanan-prev {
+    left: -15px;
+}
+
+.layanan-next {
+    right: -15px;
+}
+
+.slider-btn:hover {
+    background: #0a58ca;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.slider-btn i {
+    font-size: 1.2rem;
+}
+
+/* === DOTS === */
+.layanan-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.layanan-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.layanan-dots .dot.active {
+    background: var(--primary-color);
+    width: 30px;
+    border-radius: 5px;
+}
+
+.layanan-dots .dot:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .layanan-wrapper {
+        padding: 0 10px;
+    }
+
+    .layanan-prev {
+        left: -10px;
+    }
+
+    .layanan-next {
+        right: -10px;
+    }
+
+    .slider-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .slider-btn i {
+        font-size: 1rem;
+    }
+
+    .layanan-item {
+        min-width: 220px;
+        padding: 25px 20px;
+    }
+
+    .layanan-item i {
+        font-size: 2rem;
+    }
+
+    .layanan-item h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-layanan {
+        height: 50vh;
+    }
+
+    .layanan-page {
+        padding: 60px 0;
+    }
+
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .layanan-item {
+        min-width: 200px;
+    }
+}

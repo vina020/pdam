@@ -1,0 +1,635 @@
+/* === TARIF AIR STYLES === */
+
+/* Intro Section */
+.tarif-intro {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+    border-radius: 20px;
+    border: 2px solid #e7f3ff;
+}
+
+.intro-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #0d6efd, #17a2b8);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3);
+}
+
+.intro-icon i {
+    font-size: 3rem;
+    color: white;
+}
+
+.intro-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #212529;
+}
+
+.intro-content p {
+    color: #6c757d;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.intro-badges {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.badge-modern {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.badge-modern i {
+    font-size: 1rem;
+}
+
+.badge-modern.blue {
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+}
+
+.badge-modern.green {
+    background: linear-gradient(135deg, #198754, #20c997);
+}
+
+.badge-modern.orange {
+    background: linear-gradient(135deg, #fd7e14, #ffc107);
+}
+
+/* Calculator Box */
+.calculator-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 30px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 20px;
+    border: 2px solid #e9ecef;
+}
+
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group-calc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group-calc label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #212529;
+    font-size: 0.95rem;
+}
+
+.form-group-calc label i {
+    color: #0d6efd;
+}
+
+.form-input-calc {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background: white;
+}
+
+.form-input-calc:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+}
+
+.btn-calculate {
+    background: linear-gradient(135deg, #0d6efd, #17a2b8);
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.btn-calculate:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3);
+}
+
+/* Calculator Result */
+.calculator-result {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    border: 2px solid #e9ecef;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f8f9fa;
+}
+
+.result-header i {
+    font-size: 2rem;
+    color: #0d6efd;
+}
+
+.result-header h3 {
+    font-size: 1.4rem;
+    margin: 0;
+    color: #212529;
+}
+
+.result-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f8f9fa;
+}
+
+.breakdown-item span {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+.breakdown-item strong {
+    color: #212529;
+    font-size: 1rem;
+}
+
+.breakdown-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 15px;
+    border-top: 2px solid #e9ecef;
+}
+
+.breakdown-total span {
+    color: #212529;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.breakdown-total strong {
+    color: #0d6efd;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.result-note {
+    display: flex;
+    gap: 12px;
+    padding: 15px;
+    background: #e7f3ff;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.result-note i {
+    color: #0d6efd;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.result-note p {
+    color: #1e5a8e;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Tarif Tabs */
+.tarif-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    flex: 1;
+    min-width: 150px;
+    padding: 15px 25px;
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    border-color: #0d6efd;
+    color: #0d6efd;
+    background: #f0f7ff;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #0d6efd, #17a2b8);
+    border-color: #0d6efd;
+    color: white;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.tab-btn i {
+    font-size: 1.1rem;
+}
+
+/* Tarif Content */
+.tarif-content {
+    position: relative;
+}
+
+.tarif-table-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    animation: fadeIn 0.4s ease;
+}
+
+.tarif-table-container[data-tab]:not([data-tab="all"]) {
+    display: none;
+}
+
+.tarif-table-container.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tarif Category */
+.tarif-category {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s;
+}
+
+.tarif-category:hover {
+    border-color: #0d6efd;
+    box-shadow: 0 8px 25px rgba(13, 110, 253, 0.1);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 30px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-bottom: 2px solid #e9ecef;
+}
+
+.category-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.category-icon.sosial {
+    background: linear-gradient(135deg, #20c997, #0dcaf0);
+}
+
+.category-icon.rumah-tangga {
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+}
+
+.category-icon.niaga {
+    background: linear-gradient(135deg, #fd7e14, #ffc107);
+}
+
+.category-icon.industri {
+    background: linear-gradient(135deg, #dc3545, #fd7e14);
+}
+
+.category-icon.instansi {
+    background: linear-gradient(135deg, #6f42c1, #e83e8c);
+}
+
+.category-header h3 {
+    font-size: 1.3rem;
+    margin: 0 0 5px 0;
+    color: #212529;
+}
+
+.category-header p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Tarif Table */
+.tarif-table {
+    padding: 30px;
+}
+
+.tarif-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tarif-table thead {
+    background: #f8f9fa;
+}
+
+.tarif-table th {
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 600;
+    color: #212529;
+    border-bottom: 2px solid #e9ecef;
+    font-size: 0.95rem;
+}
+
+.tarif-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f8f9fa;
+    color: #495057;
+    font-size: 0.95rem;
+}
+
+.tarif-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.tarif-table td.price {
+    color: #0d6efd;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+/* Biaya Grid */
+.biaya-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.biaya-card {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.biaya-card:hover {
+    border-color: #0d6efd;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(13, 110, 253, 0.15);
+}
+
+.biaya-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #0d6efd, #17a2b8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.biaya-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.biaya-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #212529;
+}
+
+.biaya-amount {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+.biaya-card p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Info Important */
+.info-important {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffffff 100%);
+    border: 2px solid #ffc107;
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.info-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ffe69c;
+}
+
+.info-header i {
+    font-size: 2rem;
+    color: #ffc107;
+}
+
+.info-header h3 {
+    font-size: 1.4rem;
+    margin: 0;
+    color: #212529;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    color: #495057;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.info-list li i {
+    color: #198754;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+/* CTA Adjustments */
+.cta-modern .btn-secondary-modern {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    backdrop-filter: blur(10px);
+}
+
+.cta-modern .btn-secondary-modern:hover {
+    background: white;
+    color: #0d6efd;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .biaya-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .calculator-box {
+        grid-template-columns: 1fr;
+    }
+
+    .tarif-tabs {
+        flex-direction: column;
+    }
+
+    .tab-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .tarif-intro {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .intro-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .intro-icon i {
+        font-size: 2.5rem;
+    }
+
+    .intro-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro-badges {
+        justify-content: center;
+    }
+
+    .calculator-box {
+        padding: 20px;
+    }
+
+    .biaya-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .tarif-table {
+        padding: 20px;
+        overflow-x: auto;
+    }
+
+    .tarif-table table {
+        min-width: 500px;
+    }
+}
+
+/* Container Spacing */
+.layanan-content-modern .container > .section-modern {
+    margin-bottom: 40px;
+}
+
+.layanan-content-modern .container > .section-modern:last-child {
+    margin-bottom: 0;
+}
+
+.section-modern {
+    border: 1px solid #e9ecef;
+}
